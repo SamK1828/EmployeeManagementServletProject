@@ -27,11 +27,11 @@ This project is a dynamic **Employee Management Platform** built using **Java Se
 | Layer        | Technology     |
 |--------------|----------------|
 | Frontend     | HTML5, CSS3    |
-| Backend      | Java Servlets, JSP |
+| Backend      | Java Servlets |
 | Database     | MySQL          |
 | Architecture | MVC (DAO, Service, Controller) |
 | Server       | Apache Tomcat  |
-| Tools        | VS Code, GitHub |
+| Tools        | VS Code ,Eclipse ,GitHub |
 
 ---
 
