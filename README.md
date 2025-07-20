@@ -111,13 +111,6 @@ EmployeeManagementProject/
    Navigate to: `http://localhost:8080/EmployeeManagementProject/register.html`
 
 7. **Submit the form and verify data is inserted in the database**
-
----
-
-## 📸 Screenshots
-
-> *You can add form screenshot and success page output here by uploading images to GitHub or adding a `screenshots/` folder.*
-
 ---
 
 ## 🔗 Useful Links
@@ -131,7 +124,7 @@ EmployeeManagementProject/
 ## 👨‍🎓 Author
 
 **Samarth Deelip Kalegaonkar**
-📍 Intern @ Kiran Academy x Thunderc
+📍 Intern @ Kiran Academy x ThunderCube Pvt. Ltd.
 📧 [kalegaonkarsamarth@gmail.com](mailto:kalegaonkarsamarth@gmail.com)
 🔗 [LinkedIn](https://www.linkedin.com/in/samarth-kalegaonkar)
 🔗 [GitHub](https://github.com/SamK1828)
