@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Employee Registration Form</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background: #f4f6f8;
+	padding: 20px;
+}
+
+.container {
+	background-color: #fff;
+	max-width: 600px;
+	margin: auto;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 25px;
+	color: #333;
+}
+
+.form-group {
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	flex: 1 0 200px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+	flex: 2 0 300px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.form-group textarea {
+	resize: vertical;
+}
+
+.gender {
+	display: block;
+	align-items: center;
+	justify-content: center;
+}
+
+.gender-buttons {
+	display: inline;
+	justify-content: space-around;
+}
+
+.form-actions {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.form-actions button {
+	padding: 10px 20px;
+	margin: 5px;
+	border: none;
+	background: #007BFF;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.form-actions button[type="reset"] {
+	background: #6c757d;
+}
+
+.form-actions button:hover {
+	opacity: 0.9;
+}
+    .skills-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-left: 200px;
+      margin-bottom: 15px;
+    }
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Employee Registration Form</h2>
+		<form action="submitEmployee" method="post">
+			<div class="form-group">
+				<label for="empId">Employee ID</label> 
+				<input type="text" id="empId" name="empId" required>
+			</div>
+
+			<div class="form-group">
+				<label for="fname">First Name</label> 
+				<input type="text" id="fname" name="fname" required>
+			</div>
+
+			<div class="form-group">
+				<label for="lname">Last Name</label> 
+				<input type="text" id="lname" name="lname" required>
+			</div>
+
+			<div class="form-group">
+				<label>Gender</label>
+				<div class="gender-buttons">
+					<input type="radio" name="gender" value="Male" required> Male 
+					<input type="radio" name="gender" value="Female"> Female 
+					<input type="radio" name="gender" value="Other"> Other
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="dob">Date of Birth</label> 
+				<input type="date" id="dob" name="dob" required>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email ID</label> 
+				<input type="email" id="email" name="email" required>
+			</div>
+
+			<div class="form-group">
+				<label for="phone">Mobile Number</label> 
+				<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+			</div>
+
+			<div class="form-group">
+				<label for="designation">Designation</label> 
+				<input type="text" id="designation" name="designation" required>
+			</div>
+
+			<div class="form-group">
+				<label for="department">Department</label> 
+				<select id="department" name="department" required>
+					<option value="">--Select--</option>
+					<option>HR</option>
+					<option>IT</option>
+					<option>Finance</option>
+					<option>Operations</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="joiningDate">Joining Date</label> 
+				<input type="date" id="joiningDate" name="joiningDate" required>
+			</div>
+
+			<div class="form-group">
+				<label for="experience">Experience (in years)</label> 
+				<input type="number" id="experience" name="experience" min="0" step="0.1" required>
+			</div>
+
+			<div class="form-group">
+				<label for="salary">Salary (₹)</label> 
+				<input type="number" id="salary" name="salary" required>
+			</div>
+
+			<div class="form-group">
+				<label for="aadhar">Aadhar Number</label> 
+				<input type="text" id="aadhar" name="aadhar" pattern="\d{12}" required>
+			</div>
+
+			<div class="form-group">
+				<label for="pan">PAN Number</label> 
+				<input type="text" id="pan" name="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required>
+			</div>
+
+			<div class="form-group">
+				<label for="address">Address</label>
+				<textarea id="address" name="address" rows="3" required></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="city">City</label> 
+				<input type="text" id="city" name="city" required>
+			</div>
+
+			<div class="form-group">
+				<label for="state">State</label> 
+				<input type="text" id="state" name="state" required>
+			</div>
+
+			<div class="form-group">
+				<label for="zip">Zip Code</label> 
+				<input type="text" id="zip" name="zip" pattern="\d{6}" required>
+			</div>
+
+			<div class="form-group">
+				<label>Skills</label> 
+				<input type="checkbox" name="skills" value="Java"> Java 
+				<input type="checkbox" name="skills" value="Python"> Python 
+				<input type="checkbox" name="skills" value="SQL"> SQL 
+				<input type="checkbox" name="skills" value="Web Development"> Web Dev
+			</div>
+
+			<div class="form-group">
+				<label for="location">Preferred Work Location</label> 
+				<select id="location" name="location" required>
+					<option value="">--Select--</option>
+					<option value="Pune">Pune</option>
+					<option value="Mumbai">Mumbai</option>
+					<option value="Hyderabad">Hyderabad</option>
+					<option value="Bangalore">Bangalore</option>
+					<option value="Remote">Remote</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="linkedin">LinkedIn Profile</label>
+				<input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile">
+			</div>
+
+			<div class="form-group">
+				<label for="github">GitHub Profile</label>
+				<input type="url" id="github" name="github" placeholder="https://github.com/your-username">
+			</div>
+
+			<div class="form-actions">
+				<button type="submit">Register</button>
+				<button type="reset">Reset</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
