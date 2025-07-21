@@ -52,7 +52,7 @@ EmployeeManagementProject/
 │           └── model/
 │               └── Employee.java
 ├── WebContent/
-│   ├── register.html
+│   ├── index.html
 │   └── success.jsp
 ├── lib/
 │   └── mysql-connector-java.jar
@@ -108,7 +108,7 @@ EmployeeManagementProject/
    ```
 
 6. **Run on Apache Tomcat**
-   Navigate to: `http://localhost:8080/EmployeeManagementProject/register.html`
+   Navigate to: `http://localhost:8080/EmployeeManagementProject/index.html`
 
 7. **Submit the form and verify data is inserted in the database**
 ---
